@@ -13,13 +13,13 @@ window.onload = function(){
    // Segunda mensagem
    setTimeout(function(){
       fadeIn( msgDois, 3 );
-      setTimeout(function(){ fadeOut(bemVindo, 2) }, 5000);
+      setTimeout(function(){ fadeOut(bemVindo, 2) }, 3000);
    }, 3000);
 
    // Limpando a casa rsrs
    setTimeout(function(){
       bemVindo.style.display = "none";
-   }, 4000);
+   }, 9000);
    
 }
 
