@@ -1,6 +1,7 @@
 window.onload = function(){
 
    // Declarando as variaveis
+   document.getElementById('btnEntrar').disabled = true;
    var bemVindo = document.getElementById('bemVindo');
    var msgBemVindo = document.getElementById('msgBemVindo');
    var msgDois = document.getElementById('msgDois');
@@ -23,7 +24,7 @@ window.onload = function(){
    
 }
 
-// Startes
+// Efeitos
 function fadeIn(element, time){
    processa(element, time, 0, 100);
 }
@@ -52,20 +53,36 @@ function processa(element,time,initial,end){
    } },time * 10);
 }
 
-function validacao(){   
+// Função chamada quando clicado em ENTRAR
+function validacao(){
 
+   // Variaveis de input e bloco de erro
    var inputs = document.form.getElementsByTagName('input');
    var erro = document.getElementById("erro");
 
-
+   // Comparando todos os campos
    for (i = 0; i < inputs.length; i++) {
      
-     var elemento = inputs[i];    
+      var elemento = inputs[i];
+      var v = false;
 
-     if (elemento.value == undefined) {
+      if (elemento.value == '') {
          erro.innerHTML += 'Ops! O campo ' + elemento.name + ' é obrigatório! <br>';
-     }
+         break;
+      } else {
+         erro.innerHTML = null;
+      }
 
    }
+
+   regraBotao();
 }
 
+// Bloqueia ou não o botão
+function regraBotao(){
+   if (erro.innerHTML == null || erro.innerHTML == ''){
+      document.getElementById('btnEntrar').disabled = false;
+   } else {
+      document.getElementById('btnEntrar').disabled = true;
+   }
+}

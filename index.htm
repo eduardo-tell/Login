@@ -13,13 +13,13 @@
           <div id="msgDois"> 
             Projeto usando apenas: <p> Javascript, HTML e CSS! </p>
           </div>
-      </div>      
+      </div>
       <div class="login-page" id="divPrincipal">
           <div class="form">
-            <form class="login-form" action="#" name="form">
+            <form onchange="validacao()" class="login-form" action="#" name="form">
               <input type="text" name="nome" placeholder="Seu nome"/>
-              <input type="email" name="email" placeholder="Seu email"/>
-              <button type="button" onclick="validacao()">Entrar</button>
+              <input type="password" name="password" placeholder="Senha"/>
+              <button type="submit" onclick="validacao()" disabled="disabled" id="btnEntrar">Entrar</button>
               <p id="erro"></p>
             </form>
           </div>

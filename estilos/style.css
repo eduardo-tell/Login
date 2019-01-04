@@ -126,3 +126,7 @@ div#bemVindo {
   letter-spacing: 5px;
   font-size: 2em;  
 }
+
+button#btnEntrar[disabled] {
+  background-color: gray;
+}
