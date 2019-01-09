@@ -1,5 +1,6 @@
 # Pequeno projeto de login
 
-A intuição do projeto é desenvolver uma tela de login simples para ser usada em qualquer projeto PHP
+Num sábado a tarde, você tem uma ideia de desenvolver algo usando Javascript de uma forma simples e objetiva, como por exemplo uma tela de login. 
 
-• Sem exemplo online, volte mais tarde.
+Mesmo sendo apenas um projeto para desenvolvimento pessoal na linguagem, e para testes de desenvolvimento o projeto, você pode
+visualizalo clicando <a href="http://telldesign.github.io/Login">aqui</a>.
