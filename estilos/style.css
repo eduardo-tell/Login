@@ -3,6 +3,16 @@
   padding: 8% 0 0;
   margin: auto;
 }
+
+@media only screen and (max-width: 800px) {
+  .login-page {
+  width: auto;
+  padding: 8% 0 0;
+  margin: 20px;
+}
+
+}
+
 .form {
   position: relative;
   z-index: 1;
@@ -117,4 +127,9 @@ div#bemVindo {
 
 #btnEntrar[disabled]{
   background-color: gray;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
 }
