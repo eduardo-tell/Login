@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Negociações</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel='stylesheet' href='style.css' type='text/css' media='all'>
+    <link rel='stylesheet' href='../estilos/default.css' type='text/css' media='all'>
 </head>
 <body class="container">
     
-    <h1 class="text-center">Negociações</h1>
+    <h1 class="white">Negociações</h1>
     
-    <form class="form" onsubmit="negociacaoController.adiciona(event)">
+    <form class="form-negociacoes" onsubmit="negociacaoController.adiciona(event)">
         
-        <div class="form-group">
+        <div>
             <label for="data">Data</label>
             <input type="date" id="data" class="form-control" required autofocus/>        
         </div>    
         
-        <div class="form-group">
+        <div>
             <label for="quantidade">Quantidade</label>
             <input type="number" min="1" step="1" id="quantidade" class="form-control" value="1" required/>
         </div>
         
-        <div class="form-group">
+        <div>
             <label for="valor">Valor</label>
             <input id="valor" type="number" class="form-control"  min="0.01" step="0.01" value="0.0" required />
         </div>
@@ -32,27 +32,25 @@
             <button class="btn btn-primary m-5" type="submit">Incluir</button>
         </div>
         
+    
+        <div class="flex justify-content-between">
+            <button class="btn btn-primary text-center m-r-0" type="button">
+                Importar Negociações
+            </button>
+            <button class="btn btn-primary text-center m-r-10" type="button">
+                Apagar
+            </button>
+        </div>
         
     </form>
     
-    <div class="text-center">
-        <button class="btn btn-primary text-center" type="button">
-            Importar Negociações
-        </button>
-        <button class="btn btn-primary text-center" type="button">
-            Apagar
-        </button>
-    </div> 
-    <br>
-    <br>
-    
-    <table class="table table-hover table-bordered tabela-customizada">
+    <table>
         <thead>
-            <tr>
-                <th>DATA</th>
-                <th>QUANTIDADE</th>
-                <th>VALOR</th>
-                <th>VOLUME</th>
+            <tr class="white flex justify-content-between">
+                <th>Data</th>
+                <th>Quantidade</th>
+                <th>Valor</th>
+                <th>Volume</th>
             </tr>
         </thead>
         
