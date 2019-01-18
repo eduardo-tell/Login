@@ -9,17 +9,18 @@ class NegociacaoController {
     }
     
     adiciona(event){
+
         event.preventDefault();
 
-        // Criando uma negociação com os dados respectivos
+        let helper = new DataHelper();
+
         let negociacao = new Negociacao(
-            this._inputData.value,
+            helper.formataDataTexto(this._inputData.value),
             this._inputQuantidade.value,
             this._inputValor.value
         );
 
-        console.log(negociacao);
+        console.log(helper.formataDataTexto(negociacao.data));
 
-        // Adicionar a negociação em uma lista
     }
 }
